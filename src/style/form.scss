@@ -34,6 +34,17 @@
 	&:active {
 		opacity: 0.3;
 	}
+
+	&--disabled {
+		opacity: 0.5;
+		cursor: default;
+
+		&:hover,
+		&:active {
+			opacity: 0.5;
+			cursor: default;
+		}
+	}
 }
 .alert {
 	border: 1px solid transparent;
@@ -66,9 +77,5 @@
 	}
   }
   
-  .link {
-	color: s.color(main);
-  
-	@include s.click;
-  }
+ 
   

@@ -40,27 +40,14 @@ class User {
     this.#list.push(user)
 
     console.log(this.#list)
-
-    return user
   }
 
   static getByEmail(email) {
     return (
-      this.#list.find(
-        (user) =>
-          user.email === String(email).toLowerCase(),
-      ) || null
-    )
-  }
-
-  static getById(id) {
-    return (
-      this.#list.find((user) => user.id === Number(id)) ||
+      this.#list.find((user) => user.email === email) ||
       null
     )
   }
-
-  static getList = () => this.#list
 }
 
 module.exports = {
